@@ -1,4 +1,7 @@
 import unittest
+from bookshelf import Bookshelf, Book
+import re
+
 
 class addBook(unittest.TestCase):
     def testAddByUPC(self):
@@ -6,4 +9,9 @@ class addBook(unittest.TestCase):
          In the case of this test, it ensures that 
          'Harry Potter and the Goblet of Fire' is added
          """
-         shelf = BookShelf()
+        sampleUPC = "9780786229277"
+        shelf = Bookshelf()
+        book = shelf.addbyisbn(sampleUPC)
+        self.assertEquals(re.search("goblet of fire",book.title,re.IGNORECASE),True)
+    if __name__ == "__main__":
+        unittest.main()
