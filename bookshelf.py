@@ -5,9 +5,11 @@ class Bookshelf(object):
         self.books = []
 
     def addBook(self, book):
-        pass
+        self.books.append(book)
     def addbyisbn(self,isbn):
-        self.books.append(BookApi().getbyisbn(isbn))
+        book = BookApi().getbyisbn(isbn)
+        self.books.append(book)
+        return book
 
     def removeBook(self, book):
         pass

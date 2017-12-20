@@ -11,3 +11,6 @@ class Book(object):
         TODO: Add Logic to check isbn
         """
         self.isbn = isbn
+
+    def __str__(self):
+        return self.title

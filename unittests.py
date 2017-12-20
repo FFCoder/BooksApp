@@ -12,7 +12,8 @@ class addBook(unittest.TestCase):
         sampleUPC = "9780786229277"
         shelf = Bookshelf()
         book = shelf.addbyisbn(sampleUPC)
-        self.assertEquals(re.search("goblet of fire",book.title,re.IGNORECASE),True)
+        self.assertTrue(re.search("goblet of fire",book.title,re.IGNORECASE))
+
     
 if __name__ == "__main__":
     unittest.main()
