@@ -1,5 +1,5 @@
 import unittest
-from bookshelf import Bookshelf, Book
+from bookshelf import Bookshelf
 import re
 
 
@@ -13,5 +13,6 @@ class addBook(unittest.TestCase):
         shelf = Bookshelf()
         book = shelf.addbyisbn(sampleUPC)
         self.assertEquals(re.search("goblet of fire",book.title,re.IGNORECASE),True)
-    if __name__ == "__main__":
-        unittest.main()
+    
+if __name__ == "__main__":
+    unittest.main()
